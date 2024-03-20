@@ -1,0 +1,38 @@
+<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+
+<script>
+    const { createClient } = microcms;
+    
+    // Initialize Client SDK.
+    const client = createClient({
+        serviceDomain: "bootech", // YOUR_DOMAIN is the XXXX part of XXXX.microcms.io
+        apiKey: "GaFOid11lJlYcjzqaZ3oOLmpSbzxm1q6lDjp",
+        // retry: true // Retry attempts up to a maximum of two times.
+        // customFetcher: fetch.bind(globalThis), // Provide a custom `fetch` implementation as an option
+    });
+
+    client
+        .get({
+            endpoint: 'blogs',
+        })
+        .then((res) => console.log(res))
+        .catch(error => console.error('Error:', error));
+
+    // const apiKey = 'GaFOid11lJlYcjzqaZ3oOLmpSbzxm1q6lDjp';
+    // const apiUrl = 'https://bootech.microcms.io/api/v1/blogs';
+
+    // fetch(apiUrl, {
+    // method: 'GET',
+    // headers: {
+    //     'X-MICROCMS-API-KEY': apiKey
+    // }
+    // })
+    // .then(response => {
+    // if (!response.ok) {
+    //     throw new Error('Network response was not ok');
+    // }
+    // return response.json();
+    // })
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+</script>
