@@ -1,3 +1,7 @@
+if (document.location.protocol==="http:") {
+    location.replace('https://'+window.location.host+window.location.pathname);
+}
+
 const { createClient } = microcms;
 
 // Initialize Client SDK.
