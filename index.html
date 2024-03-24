@@ -1,38 +1,49 @@
-<script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bootech">
+    <title>bootech</title>
 
-<script>
-    const { createClient } = microcms;
-    
-    // Initialize Client SDK.
-    const client = createClient({
-        serviceDomain: "bootech", // YOUR_DOMAIN is the XXXX part of XXXX.microcms.io
-        apiKey: "GaFOid11lJlYcjzqaZ3oOLmpSbzxm1q6lDjp",
-        // retry: true // Retry attempts up to a maximum of two times.
-        // customFetcher: fetch.bind(globalThis), // Provide a custom `fetch` implementation as an option
-    });
+    <script type="text/javascript" src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+    <script type="text/javascript" src="./assets/js/index.js"></script>
 
-    client
-        .get({
-            endpoint: 'blogs',
-        })
-        .then((res) => console.log(res))
-        .catch(error => console.error('Error:', error));
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    // const apiKey = 'GaFOid11lJlYcjzqaZ3oOLmpSbzxm1q6lDjp';
-    // const apiUrl = 'https://bootech.microcms.io/api/v1/blogs';
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/img/favicon.ico">
+</head>
+<body id="page_top">
+    <header>
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+            <form action="/blog/list">
+                <input type="search" name="q" value="" placeholder="">
+                <button>submit</button>
+            </form>
+        </div>
+    </header>
 
-    // fetch(apiUrl, {
-    // method: 'GET',
-    // headers: {
-    //     'X-MICROCMS-API-KEY': apiKey
-    // }
-    // })
-    // .then(response => {
-    // if (!response.ok) {
-    //     throw new Error('Network response was not ok');
-    // }
-    // return response.json();
-    // })
-    // .then(data => console.log(data))
-    // .catch(error => console.error('Error:', error));
-</script>
+    <nav>
+        <!-- ナビゲーションのコンテンツ -->
+    </nav>
+
+    <main>
+        <!-- メインコンテンツ -->
+        <article>
+            <!-- 記事コンテンツ -->
+        </article>
+    </main>
+
+    <aside>
+        <!-- サイドバーや追加情報のコンテンツ -->
+    </aside>
+
+    <footer>
+        2024 bootech.
+    </footer>
+</body>
+</html>
